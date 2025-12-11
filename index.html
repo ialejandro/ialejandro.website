@@ -1,28 +1,379 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- title -->
-        <title>Iván Alejandro Marugán</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AWS, Terraform & Kubernetes consultant helping startups and companies scale their cloud infrastructure efficiently.">
+    <meta name="keywords" content="AWS consultant, Terraform, Kubernetes, DevOps, Cloud Infrastructure, Cloud Migration, Startup consulting">
+    <meta name="author" content="Ivan Alejandro Marugan">
 
-        <!-- metadata -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ivan Alejandro Marugan | Platform Engineer | Cloud | DevOps | AWS | Kubernetes | Terraform</title>
 
-        <!-- style -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="style.css" media="screen" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <div class="content">
-            <h1 class="mb-0 font-weight-bold">Iván Alejandro Marugán</h1>
-            <div class="row justify-content-start">
-                <div class="col-10">
-                    <a href="https://github.com/ialejandro">GitHub</a> |
-                    <a href="mailto:hello@ialejandro.rocks">Mail</a> |
-                    <a href="https://linkedin.com/in/ialejandro/">LinkedIn</a> | 
-                    <a href="https://www.malt.es/profile/ivanalejandromarugan">Malt</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">ialejandro</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Cloud Infrastructure
+                    <span class="gradient-text">for companies that can't afford downtime or waste</span>
+                </h1>
+                <p class="hero-subtitle">
+                    I help startups and scale-ups design, migrate and operate cloud platforms that stay reliable under pressure and predictable in cost.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary btn-large">Get in touch</a>
+                    <a href="#services" class="btn-secondary btn-large">Services</a>
                 </div>
             </div>
         </div>
-    </body>
+    </section>
+
+    <!-- services -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">
+                Specialized consulting to solve complex infrastructure challenges
+            </p>
+            <div class="services-grid">
+                <div class="service-card" onclick="contactService('AWS consulting: migration, optimization and cost management', 'Hello,\n\nI am interested in your AWS consulting services. I would like to discuss how you can help us with:\n\n- Cloud migration strategies and implementation\n- Infrastructure optimization for better performance\n- Cost management and FinOps practices\n- Architecture design and best practices\n- Security and compliance setup\n\nI would appreciate the opportunity to discuss our specific needs and how your expertise can help us achieve our cloud infrastructure goals.\n\nBest regards')">
+                    <div class="service-header">
+                        <h3 class="service-title">AWS consulting: migration, optimization and cost management</h3>
+                        <p class="service-context">Best for: startups migrating to AWS with cost pressure</p>
+                    </div>
+                    <p class="service-description">I provide comprehensive AWS consulting services to help you migrate to the cloud, optimize your infrastructure, and manage costs effectively. Through proven best practices and automation, I work with you to design robust architectures that reduce costs while improving performance and security.</p>
+                    <div class="service-features">
+                        <span class="feature-item">Cloud architecture design and implementation</span>
+                        <span class="feature-item">Zero-downtime migration strategies</span>
+                        <span class="feature-item">Cost optimization and FinOps</span>
+                        <span class="feature-item">Security and compliance setup</span>
+                    </div>
+                </div>
+                <div class="service-card" onclick="contactService('Kubernetes consulting: architecture and implementation', 'Hello,\n\nI am interested in your Kubernetes consulting services. I would like to explore how you can assist us with:\n\n- Kubernetes cluster design and implementation\n- GitOps workflows and automation\n- Service mesh and security policies\n- Monitoring and observability stack\n- Scalable container orchestration platforms\n\nI would value a conversation about how your expertise can help us build and manage enterprise-grade Kubernetes infrastructure.\n\nBest regards')">
+                    <div class="service-header">
+                        <h3 class="service-title">Kubernetes consulting: architecture and implementation</h3>
+                        <p class="service-context">Used when: Kubernetes becomes a scaling or reliability risk</p>
+                    </div>
+                    <p class="service-description">I help you build scalable and resilient container orchestration platforms with Kubernetes. From initial cluster design to full implementation, I work alongside your team to set up GitOps workflows, monitoring integration, and cloud-agnostic deployments that support enterprise-grade applications.</p>
+                    <div class="service-features">
+                        <span class="feature-item">Kubernetes cluster design and setup</span>
+                        <span class="feature-item">GitOps workflows and automation</span>
+                        <span class="feature-item">Service mesh and security policies</span>
+                        <span class="feature-item">Monitoring and observability stack</span>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="contactService('Legacy application modernization and cloud migration', 'Hello,\n\nI am interested in your application modernization consulting services. We are looking for expertise in:\n\n- Legacy system assessment and migration planning\n- Containerization and microservices architecture\n- Cloud-native transformation strategies\n- Performance and security improvements\n- Modernization roadmap and implementation\n\nI would like to discuss how you can help us modernize our applications for improved scalability, security, and maintainability.\n\nBest regards')">
+                    <div class="service-header">
+                        <h3 class="service-title">Legacy application modernization and cloud migration</h3>
+                        <p class="service-context">Best for: teams running monolithic apps that need to scale</p>
+                    </div>
+                    <p class="service-description">I specialize in modernizing legacy applications and guiding them through cloud-native transformation. Working closely with your team, I assess your current systems, design migration strategies, and implement containerization and microservices architectures that improve security, performance, and long-term maintainability.</p>
+                    <div class="service-features">
+                        <span class="feature-item">Legacy system assessment and migration</span>
+                        <span class="feature-item">Containerization and microservices</span>
+                        <span class="feature-item">Cloud-native transformation</span>
+                        <span class="feature-item">Performance and security improvements</span>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="contactService('Strategic IT consulting and DevOps transformation', 'Hello,\n\nI am interested in your strategic IT consulting services. We are seeking guidance on:\n\n- DevOps transformation and culture implementation\n- Technology strategy and roadmaps\n- Infrastructure architecture design\n- Digital transformation planning\n- Aligning technology initiatives with business objectives\n\nI would appreciate the opportunity to discuss how your consulting expertise can help us achieve our technology and business goals.\n\nBest regards')">
+                    <div class="service-header">
+                        <h3 class="service-title">Strategic IT consulting and DevOps transformation</h3>
+                        <p class="service-context">Best for: scale-ups aligning infrastructure with business growth</p>
+                    </div>
+                    <p class="service-description">I offer strategic guidance to help align your technology initiatives with business objectives. Through comprehensive IT consulting, I work with you on DevOps transformation, technology strategy, and infrastructure architecture design, ensuring your digital transformation efforts deliver real business value.</p>
+                    <div class="service-features">
+                        <span class="feature-item">DevOps transformation and culture</span>
+                        <span class="feature-item">Technology strategy and roadmaps</span>
+                        <span class="feature-item">Infrastructure architecture design</span>
+                        <span class="feature-item">Digital transformation planning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- who i am -->
+    <section class="section who-i-am">
+        <div class="container">
+            <h2 class="section-title">Why companies work with me</h2>
+            <div class="who-content">
+                <div class="who-text">
+                    <p>
+                        I work with teams that already run in production and need their infrastructure to stop being a bottleneck.
+                    </p>
+                    <p>
+                        Specialized in container orchestration with Kubernetes, infrastructure automation with Terraform on AWS, and CI/CD pipelines with GitLab and GitHub Actions.
+                    </p>
+                    <p>
+                        Maintainer of <a href="https://github.com/devops-ia" target="_blank" rel="noopener">devops-ia</a>,
+                        an OSS organization focused on creating production-grade tools for the DevOps community.
+                    </p>
+                </div>
+                <div class="who-image">
+                    <img src="assets/photo-profile.jpg" alt="Iván Alejandro Marugán" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- oss contributions -->
+    <section class="section oss-section">
+        <div class="container">
+            <div class="oss-header">
+                <img src="https://avatars.githubusercontent.com/u/102672086?s=200&v=4" alt="devops-ia" class="oss-logo">
+                <div class="oss-header-text">
+                    <h2 class="section-title">Open Source</h2>
+                    <p class="oss-intro">Open-source work used in production environments, not demos.</p>
+                    <p>
+                        Maintainer of <a href="https://github.com/devops-ia" target="_blank" rel="noopener">devops-ia</a>,
+                        creating production-grade Helm charts and tools for Kubernetes deployments.
+                    </p>
+                    <p class="oss-closing">This is the same tooling and standards I bring into client infrastructures.</p>
+                </div>
+            </div>
+
+            <h3 class="oss-projects-title">Projects</h3>
+            <div class="oss-projects">
+                <a href="https://github.com/devops-ia/helm-opencti" class="oss-project-card" target="_blank" rel="noopener">
+                    <h4>helm-opencti</h4>
+                    <p>Helm chart for OpenCTI, an open-source platform for cyber threat intelligence</p>
+                </a>
+                <a href="https://github.com/devops-ia/helm-cruise-control" class="oss-project-card" target="_blank" rel="noopener">
+                    <h4>helm-cruise-control</h4>
+                    <p>Helm chart for Cruise Control, automating Kafka operations and optimization</p>
+                </a>
+                <a href="https://github.com/devops-ia/helm-simple-krr-dashboard" class="oss-project-card" target="_blank" rel="noopener">
+                    <h4>helm-simple-krr-dashboard</h4>
+                    <p>Simple dashboard for Kubernetes Resource Recommendations (KRR) visualization</p>
+                </a>
+                <a href="https://github.com/ialejandro/crowdfunding-real-estate-scrapy" class="oss-project-card" target="_blank" rel="noopener">
+                    <h4>crowdfunding-real-estate-scrapy</h4>
+                    <p>Scrapy-based crawler for aggregating data from real estate crowdfunding platforms, enabling market analysis and investment opportunity tracking</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- tech -->
+    <section id="expertise" class="section expertise">
+        <div class="container">
+            <h2 class="section-title">Technologies I deploy and operate in production</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/aws.svg" alt="AWS" class="tech-logo">
+                        <div class="tech-name">AWS</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>Cloud platform for scalable infrastructure, compute, storage, and managed services</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/terraform.svg" alt="Terraform" class="tech-logo">
+                        <div class="tech-name">Terraform</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>Infrastructure as Code tool for provisioning and managing cloud resources declaratively</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/kubernetes.svg" alt="Kubernetes" class="tech-logo">
+                        <div class="tech-name">Kubernetes</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>Container orchestration platform for automating deployment, scaling, and management</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/helm.png" alt="Helm" class="tech-logo">
+                        <div class="tech-name">Helm</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>Package manager for Kubernetes to deploy and manage applications efficiently</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/github.svg" alt="GitHub Actions" class="tech-logo">
+                        <div class="tech-name">GitHub Actions</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>CI/CD automation platform integrated with GitHub for building and deploying code</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/gitlab.svg" alt="GitLab CI/CD" class="tech-logo">
+                        <div class="tech-name">GitLab CI/CD</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>Integrated DevOps platform for continuous integration and continuous deployment</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/argocd.svg" alt="ArgoCD" class="tech-logo">
+                        <div class="tech-name">ArgoCD</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>GitOps continuous delivery tool for Kubernetes with declarative deployments</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/prometheus.svg" alt="Prometheus" class="tech-logo">
+                        <div class="tech-name">Prometheus</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>Monitoring and alerting toolkit for collecting and querying metrics</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-front">
+                        <img src="assets/logos/dynatrace.svg" alt="Dynatrace" class="tech-logo">
+                        <div class="tech-name">Dynatrace</div>
+                    </div>
+                    <div class="tech-back">
+                        <p>AI-powered observability platform for full-stack monitoring and analytics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- work together -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Available for projects</h2>
+            <div class="contact-info">
+                <p class="contact-text">
+                If you're evaluating migrations, scaling issues or cost overruns, we can talk.
+                </p>
+                <p class="contact-email">
+                    <a href="mailto:projects@ialejandro.rocks" class="email-link">projects@ialejandro.rocks</a>
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <a href="https://linkedin.com/in/ialejandro/" class="contact-card-link" target="_blank" rel="noopener" title="LinkedIn">
+                    <div class="contact-card">
+                        <img src="assets/logos/linkedin.svg" alt="LinkedIn" width="64" height="64">
+                    </div>
+                </a>
+                <a href="https://github.com/ialejandro" class="contact-card-link" target="_blank" rel="noopener" title="GitHub">
+                    <div class="contact-card">
+                        <img src="assets/logos/github.svg" alt="GitHub" width="64" height="64">
+                    </div>
+                </a>
+                <a href="https://www.malt.es/profile/ivanalejandromarugan" class="contact-card-link" target="_blank" rel="noopener" title="Malt">
+                    <div class="contact-card">
+                        <img src="assets/logos/malt.svg" alt="Malt" width="64" height="64">
+                    </div>
+                </a>
+                <a href="https://app.shakersworks.com/share-profile/6939f019799e575028145f15?tab=work-skills" class="contact-card-link" target="_blank" rel="noopener" title="Shakers">
+                    <div class="contact-card">
+                        <img src="assets/logos/shakers.svg" alt="Shakers" width="64" height="64">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Ivan Alejandro Marugan | <span id="currentYear"></span></p>
+        </div>
+    </footer>
+
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="modal-title">Contact via email</h3>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-service" id="modalServiceName"></div>
+                <p class="modal-description">Your email client will open with a pre-filled message. You can edit it before sending.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="modal-btn modal-btn-primary" onclick="confirmContact()">Open email client</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set current year dynamically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Email modal functionality
+        let pendingEmailData = null;
+        function contactService(serviceName, serviceDescription) {
+            pendingEmailData = {
+                serviceName: serviceName,
+                serviceDescription: serviceDescription
+            };
+            document.getElementById('modalServiceName').textContent = serviceName;
+            const modal = document.getElementById('contactModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            pendingEmailData = null;
+        }
+
+        function confirmContact() {
+            if (pendingEmailData) {
+                const email = 'projects@ialejandro.rocks';
+                const subject = '[CONSULTING] ' + pendingEmailData.serviceName;
+                const body = pendingEmailData.serviceDescription;
+                const mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+                window.location.href = mailtoLink;
+                closeModal();
+            }
+        }
+
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
 </html>
