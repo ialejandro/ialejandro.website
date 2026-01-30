@@ -716,6 +716,12 @@ body {
     margin-top: var(--space-md);
 }
 
+.contact-separator {
+    margin: 0 0.5rem;
+    color: var(--text-light);
+    font-weight: var(--font-light);
+}
+
 .email-link {
     color: var(--primary-color);
     text-decoration: none;
