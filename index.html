@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,370 +12,347 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
     <script>
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
-                    colors: {
-                        "primary": "#007AFF",
-                        "primary-container": "#4b8eff",
-                        "surface": "#131313",
-                        "surface-dim": "#131313",
-                        "surface-container-lowest": "#0e0e0e",
-                        "surface-container-low": "#1c1b1b",
-                        "surface-container": "#201f1f",
-                        "surface-container-high": "#2a2a2a",
-                        "surface-container-highest": "#353534",
-                        "surface-variant": "#353534",
-                        "on-surface": "#e5e2e1",
-                        "on-surface-variant": "#c1c6d7",
-                        "outline-variant": "#414755",
-                    },
                     fontFamily: {
-                        headline: ["Inter"],
-                        body: ["Inter"],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['"Space Grotesk"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
                     }
                 },
             },
         }
     </script>
 </head>
-<body class="bg-surface text-on-surface font-body antialiased">
+<body class="bg-[#0a0a0a] text-white font-body antialiased">
 
     <!-- nav -->
-    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 py-5 flex justify-end items-center">
-            <div class="flex gap-8 items-center tracking-tight text-sm font-medium">
-                <a class="text-zinc-400 hover:text-white transition-colors" href="#services">Services</a>
-                <a class="text-zinc-400 hover:text-white transition-colors" href="#expertise">Expertise</a>
-                <a class="text-zinc-400 hover:text-white transition-colors" href="#contact">Contact</a>
+    <nav class="fixed top-0 w-full z-50 bg-[#0a0a0a] border-b-2 border-white/20">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
+            <a href="#" class="font-mono text-sm font-bold tracking-[0.2em] uppercase text-white">IAM<span class="text-[#CDFF50]">.</span></a>
+            <div class="flex gap-6 md:gap-8 items-center font-mono text-[11px] font-bold tracking-[0.15em] uppercase">
+                <a class="text-neutral-500 hover:text-[#CDFF50] transition-colors" href="#work">Work</a>
+                <a class="text-neutral-500 hover:text-[#CDFF50] transition-colors" href="#expertise">Expertise</a>
+                <a class="text-neutral-500 hover:text-[#CDFF50] transition-colors" href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- hero -->
-    <header class="relative pt-44 pb-28 px-6 md:px-8 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-[#007AFF10] to-transparent opacity-50 pointer-events-none"></div>
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low border border-outline-variant/15 mb-10">
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-on-surface-variant">AWS · Terraform · Kubernetes · DevOps · Observability · GitOps</span>
+    <header class="min-h-screen flex flex-col justify-center pt-16 pb-0 px-6 md:px-10 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto w-full">
+            <div class="hero-animate-1">
+                <span class="font-mono text-[11px] font-bold tracking-[0.3em] uppercase text-neutral-500 mb-8 block">AWS · Terraform · Kubernetes · DevOps · Observability · GitOps</span>
             </div>
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white mb-8 leading-[0.95] text-balance">
-                Cloud Infrastructure <span class="text-primary">for companies that can't afford downtime or waste</span>
+            <h1 class="hero-animate-2">
+                <span class="block text-[clamp(3rem,11vw,9rem)] font-display font-bold tracking-[-0.04em] leading-[0.9] uppercase">Cloud</span>
+                <span class="block text-[clamp(3rem,11vw,9rem)] font-display font-bold tracking-[-0.04em] leading-[0.9] uppercase">Infra<span class="text-[#CDFF50]">_</span></span>
+                <span class="block text-[clamp(3rem,11vw,9rem)] font-display font-bold tracking-[-0.04em] leading-[0.9] uppercase">structure</span>
             </h1>
-            <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-                I work with startups and scale-ups to build cloud platforms that hold up when things get real, and don't burn through budget while doing it.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a class="px-8 py-4 bg-primary text-white rounded-lg font-bold text-lg hover:bg-primary-container transition-all active:scale-95 flex items-center gap-2" href="#contact">
+            <div class="hero-animate-3 mt-8 max-w-2xl border-l-2 border-[#CDFF50] pl-6">
+                <p class="text-lg md:text-xl text-neutral-400 leading-relaxed">
+                    <span class="text-white font-semibold">for companies that can't afford downtime or waste.</span> I work with startups and scale-ups to build cloud platforms that hold up when things get real, and don't burn through budget while doing it.
+                </p>
+            </div>
+            <div class="hero-animate-4 mt-12 flex flex-col sm:flex-row gap-4">
+                <a class="inline-flex items-center gap-3 px-8 py-4 bg-[#CDFF50] text-black font-bold text-sm uppercase tracking-wider hover:bg-white transition-colors" href="#contact">
                     Get in touch
-                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                    <span class="text-lg">→</span>
                 </a>
-                <a class="px-8 py-4 bg-surface-container-high text-white rounded-lg font-bold text-lg hover:bg-surface-container-highest transition-all active:scale-95" href="#services">
-                    Services
+                <a class="inline-flex items-center gap-3 px-8 py-4 border-2 border-white text-white font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors" href="#work">
+                    View work
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- services -->
-    <section class="py-24 md:py-32 bg-surface-container-lowest" id="services">
-        <div class="max-w-7xl mx-auto px-6 md:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 gap-6">
-                <div class="max-w-xl">
-                    <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Services</span>
-                    <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">Hands-on help with the infrastructure problems that keep you up at night</h2>
-                </div>
+    <!-- marquee band -->
+    <div class="marquee-band py-5 bg-[#0a0a0a]">
+        <div class="marquee-track">
+            <span class="font-mono text-sm font-bold tracking-[0.2em] uppercase text-white/40 whitespace-nowrap">AWS · TERRAFORM · KUBERNETES · DEVOPS · GITOPS · OBSERVABILITY · HELM · CI/CD · ARGOCD · PROMETHEUS ·&nbsp;</span>
+            <span class="font-mono text-sm font-bold tracking-[0.2em] uppercase text-white/40 whitespace-nowrap">AWS · TERRAFORM · KUBERNETES · DEVOPS · GITOPS · OBSERVABILITY · HELM · CI/CD · ARGOCD · PROMETHEUS ·&nbsp;</span>
+        </div>
+    </div>
+
+    <!-- case studies -->
+    <section class="py-24 md:py-32 bg-[#0a0a0a]" id="work">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <div class="mb-16 md:mb-20 reveal-up">
+                <span class="font-mono text-[11px] font-bold tracking-[0.3em] uppercase text-[#CDFF50] mb-4 block">/Work</span>
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white tracking-[-0.03em] uppercase leading-[0.95]">Hands-on help<br>with the infra<br>problems that<br>keep you up<br>at night</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- cloud architecture -->
-                <div class="p-8 bg-surface-container-low rounded-xl group hover:bg-surface-container transition-all duration-300 border border-outline-variant/5 cursor-pointer" onclick="contactService('Cloud architecture and migration', 'Hey Ivan,\n\nWe are looking at our AWS setup and think we could use some help — whether it is planning a migration, getting costs under control, or just making sure our architecture makes sense for where we are headed.\n\nWould love to chat about what that could look like.\n\nCheers')">
-                    <div class="flex items-center justify-between mb-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">cloud_done</span>
-                        <span class="text-xs font-mono text-on-surface-variant/40">01</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Cloud architecture and migration</h3>
-                    <p class="text-sm text-primary/80 mb-4 font-medium">You're moving to AWS and every euro counts</p>
-                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Your AWS bill shouldn't surprise you every month. I design cloud architectures that actually make sense for your scale, migrate workloads without taking things offline, and set up cost controls so you know exactly where every dollar goes.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-2 border-neutral-800">
+                <!-- 001 cloud architecture -->
+                <div class="case-card p-8 md:p-10 border-b-2 md:border-r-2 border-neutral-800 bg-[#0a0a0a] cursor-pointer" onclick="contactService('Cloud architecture and migration', 'Hey Ivan,\n\nWe are looking at our AWS setup and think we could use some help — whether it is planning a migration, getting costs under control, or just making sure our architecture makes sense for where we are headed.\n\nWould love to chat about what that could look like.\n\nCheers')">
+                    <span class="font-mono text-[11px] font-bold tracking-[0.2em] text-[#CDFF50] mb-6 block">/001</span>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold text-white mb-3 tracking-tight uppercase">Cloud architecture and migration</h3>
+                    <p class="text-sm text-neutral-500 mb-4 font-mono">You're moving to AWS and every euro counts</p>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6">Your AWS bill shouldn't surprise you every month. I design cloud architectures that actually make sense for your scale, migrate workloads without taking things offline, and set up cost controls so you know exactly where every dollar goes.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Architecture design</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Zero-downtime migration</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">FinOps and cost control</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Security and compliance</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Architecture design</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Zero-downtime migration</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">FinOps and cost control</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Security and compliance</span>
                     </div>
-                    <div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 mt-6"></div>
                 </div>
 
-                <!-- kubernetes -->
-                <div class="p-8 bg-surface-container-low rounded-xl group hover:bg-surface-container transition-all duration-300 border border-outline-variant/5 cursor-pointer" onclick="contactService('Kubernetes and orchestration', 'Hey Ivan,\n\nOur Kubernetes setup is becoming hard to manage and we could use someone who has done this before — from cluster architecture to GitOps and observability.\n\nWould be great to talk through our situation.\n\nCheers')">
-                    <div class="flex items-center justify-between mb-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">hub</span>
-                        <span class="text-xs font-mono text-on-surface-variant/40">02</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Kubernetes and orchestration</h3>
-                    <p class="text-sm text-primary/80 mb-4 font-medium">K8s went from helpful to scary. Let's fix that</p>
-                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Kubernetes is powerful until it breaks at 3 AM. I set up clusters your team can actually operate, with GitOps so deployments are predictable, observability so you catch issues before users do, and security policies that don't slow anyone down.</p>
+                <!-- 002 kubernetes -->
+                <div class="case-card p-8 md:p-10 border-b-2 border-neutral-800 bg-[#0a0a0a] cursor-pointer" onclick="contactService('Kubernetes and orchestration', 'Hey Ivan,\n\nOur Kubernetes setup is becoming hard to manage and we could use someone who has done this before — from cluster architecture to GitOps and observability.\n\nWould be great to talk through our situation.\n\nCheers')">
+                    <span class="font-mono text-[11px] font-bold tracking-[0.2em] text-[#CDFF50] mb-6 block">/002</span>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold text-white mb-3 tracking-tight uppercase">Kubernetes and orchestration</h3>
+                    <p class="text-sm text-neutral-500 mb-4 font-mono">K8s went from helpful to scary. Let's fix that</p>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6">Kubernetes is powerful until it breaks at 3 AM. I set up clusters your team can actually operate, with GitOps so deployments are predictable, observability so you catch issues before users do, and security policies that don't slow anyone down.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Cluster design and setup</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">GitOps workflows</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Service mesh and security</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Monitoring and observability</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Cluster design and setup</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">GitOps workflows</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Service mesh and security</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Monitoring and observability</span>
                     </div>
-                    <div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 mt-6"></div>
                 </div>
 
-                <!-- modernization -->
-                <div class="p-8 bg-surface-container-low rounded-xl group hover:bg-surface-container transition-all duration-300 border border-outline-variant/5 cursor-pointer" onclick="contactService('Modernization and containers', 'Hey Ivan,\n\nWe have a legacy app that is getting in the way of shipping new features. We are thinking about containerizing parts of it and moving to the cloud, but want to do it without breaking everything.\n\nWould love your take on how to approach this.\n\nCheers')">
-                    <div class="flex items-center justify-between mb-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
-                        <span class="text-xs font-mono text-on-surface-variant/40">03</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Modernization and containers</h3>
-                    <p class="text-sm text-primary/80 mb-4 font-medium">Your monolith works, but it's holding you back</p>
-                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">That monolith served you well until it didn't. I help teams break it apart at a pace that won't wreck production: containerize what makes sense, extract services where it matters, and move to the cloud without a six-month freeze on features.</p>
+                <!-- 003 modernization -->
+                <div class="case-card p-8 md:p-10 md:border-r-2 border-b-2 md:border-b-0 border-neutral-800 bg-[#0a0a0a] cursor-pointer" onclick="contactService('Modernization and containers', 'Hey Ivan,\n\nWe have a legacy app that is getting in the way of shipping new features. We are thinking about containerizing parts of it and moving to the cloud, but want to do it without breaking everything.\n\nWould love your take on how to approach this.\n\nCheers')">
+                    <span class="font-mono text-[11px] font-bold tracking-[0.2em] text-[#CDFF50] mb-6 block">/003</span>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold text-white mb-3 tracking-tight uppercase">Modernization and containers</h3>
+                    <p class="text-sm text-neutral-500 mb-4 font-mono">Your monolith works, but it's holding you back</p>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6">That monolith served you well until it didn't. I help teams break it apart at a pace that won't wreck production: containerize what makes sense, extract services where it matters, and move to the cloud without a six-month freeze on features.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">System assessment</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Containerization</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Cloud-native migration</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Performance and security</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">System assessment</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Containerization</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Cloud-native migration</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Performance and security</span>
                     </div>
-                    <div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 mt-6"></div>
                 </div>
 
-                <!-- devops -->
-                <div class="p-8 bg-surface-container-low rounded-xl group hover:bg-surface-container transition-all duration-300 border border-outline-variant/5 cursor-pointer" onclick="contactService('DevOps strategy and pipelines', 'Hey Ivan,\n\nWe are growing and our deployment process is not keeping up. We need someone to help us figure out the right DevOps practices, tooling, and architecture so we can ship faster without things falling apart.\n\nLet us talk.\n\nCheers')">
-                    <div class="flex items-center justify-between mb-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">settings_suggest</span>
-                        <span class="text-xs font-mono text-on-surface-variant/40">04</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">DevOps strategy and pipelines</h3>
-                    <p class="text-sm text-primary/80 mb-4 font-medium">Growing fast, but infra decisions feel like guesswork</p>
-                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Growing fast but your infrastructure decisions feel like guesswork? I work with engineering leads to build a real DevOps culture, not just tooling, but the practices, pipelines, and architecture that let your team ship with confidence.</p>
+                <!-- 004 devops -->
+                <div class="case-card p-8 md:p-10 bg-[#0a0a0a] cursor-pointer" onclick="contactService('DevOps strategy and pipelines', 'Hey Ivan,\n\nWe are growing and our deployment process is not keeping up. We need someone to help us figure out the right DevOps practices, tooling, and architecture so we can ship faster without things falling apart.\n\nLet us talk.\n\nCheers')">
+                    <span class="font-mono text-[11px] font-bold tracking-[0.2em] text-[#CDFF50] mb-6 block">/004</span>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold text-white mb-3 tracking-tight uppercase">DevOps strategy and pipelines</h3>
+                    <p class="text-sm text-neutral-500 mb-4 font-mono">Growing fast, but infra decisions feel like guesswork</p>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6">Growing fast but your infrastructure decisions feel like guesswork? I work with engineering leads to build a real DevOps culture, not just tooling, but the practices, pipelines, and architecture that let your team ship with confidence.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">DevOps culture</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Tech strategy and roadmaps</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Infra architecture</span>
-                        <span class="text-[10px] px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-medium">CI/CD pipelines</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">DevOps culture</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Tech strategy and roadmaps</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">Infra architecture</span>
+                        <span class="font-mono text-[10px] px-3 py-1 border border-neutral-700 text-neutral-500 uppercase tracking-wider">CI/CD pipelines</span>
                     </div>
-                    <div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 mt-6"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- who i am -->
-    <section class="py-24 md:py-32 px-6 md:px-8 bg-surface">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-                <div class="relative group order-2 lg:order-1">
-                    <div class="absolute -inset-4 bg-gradient-to-tr from-primary to-transparent opacity-20 blur-2xl rounded-full"></div>
-                    <img alt="Ivan Alejandro Marugan" class="relative z-10 w-full max-w-md mx-auto aspect-square object-cover rounded-2xl transition-all duration-700" src="assets/photo-profile.jpg">
+    <!-- about -->
+    <section class="py-24 md:py-32 px-6 md:px-10 border-t-2 border-neutral-800">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                <div class="lg:col-span-5 reveal-left">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-[#CDFF50]"></div>
+                        <img alt="Ivan Alejandro Marugan" class="relative z-10 w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700 border-2 border-white" src="assets/photo-profile.jpg">
+                    </div>
                 </div>
-                <div class="order-1 lg:order-2">
-                    <span class="text-primary font-bold tracking-widest text-xs uppercase mb-6 block">About me</span>
-                    <h2 class="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter leading-tight">Ivan Alejandro Marugan</h2>
-                    <p class="text-lg text-on-surface-variant mb-6 font-light leading-relaxed">
-                        I'm a platform engineer based in Spain. I've been building and running cloud infrastructure for years, mostly on AWS with Terraform, Kubernetes, and whatever CI/CD tool the team already uses.
-                    </p>
-                    <p class="text-on-surface-variant mb-4">
-                        I got into this because I like solving the kind of problems where the system is on fire at 2 AM and someone needs to figure out why. Over time that turned into helping companies build infrastructure that doesn't catch fire in the first place.
-                    </p>
-                    <p class="text-on-surface-variant mb-10">
-                        I also run <a href="https://github.com/devops-ia" target="_blank" rel="noopener" class="text-primary hover:text-primary-container transition-colors">devops-ia</a>, an open source org where I publish Helm charts and Kubernetes tools that teams use in production. Same standards I bring to client work.
-                    </p>
+                <div class="lg:col-span-7 reveal-right">
+                    <span class="font-mono text-[11px] font-bold tracking-[0.3em] uppercase text-[#CDFF50] mb-6 block">/About</span>
+                    <h2 class="text-4xl md:text-6xl font-display font-bold text-white mb-10 tracking-[-0.03em] uppercase leading-[0.95]">Ivan Alejandro<br>Marugan</h2>
+                    <div class="space-y-6 text-neutral-400 leading-relaxed border-l-2 border-neutral-800 pl-6">
+                        <p class="text-lg">
+                            I'm a platform engineer based in Spain. I've been building and running cloud infrastructure for years, mostly on AWS with Terraform, Kubernetes, and whatever CI/CD tool the team already uses.
+                        </p>
+                        <p>
+                            I got into this because I like solving the kind of problems where the system is on fire at 2 AM and someone needs to figure out why. Over time that turned into helping companies build infrastructure that doesn't catch fire in the first place.
+                        </p>
+                        <p>
+                            I also run <a href="https://github.com/devops-ia" target="_blank" rel="noopener" class="text-[#CDFF50] hover:text-white transition-colors border-b border-[#CDFF50]/30 hover:border-white">devops-ia</a>, an open source org where I publish Helm charts and Kubernetes tools that teams use in production. Same standards I bring to client work.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- oss contributions -->
-    <section class="py-24 md:py-32 bg-surface-container-low" id="open-source">
-        <div class="max-w-7xl mx-auto px-6 md:px-8">
-            <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
-                <img src="https://avatars.githubusercontent.com/u/102672086?s=200&v=4" alt="devops-ia" class="w-16 h-16 rounded-xl">
+    <!-- open source -->
+    <section class="py-24 md:py-32 border-t-2 border-neutral-800" id="open-source">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <div class="flex items-center gap-6 mb-6 reveal-up">
+                <img src="https://avatars.githubusercontent.com/u/102672086?s=200&v=4" alt="devops-ia" class="w-14 h-14 border-2 border-white">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight">Open Source</h2>
-                    <p class="text-on-surface-variant mt-2">Things I build and maintain that people actually use in production.</p>
+                    <span class="font-mono text-[11px] font-bold tracking-[0.3em] uppercase text-[#CDFF50] block">/Open Source</span>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white tracking-[-0.03em] uppercase mt-1">devops-ia</h2>
                 </div>
             </div>
-            <p class="text-on-surface-variant mb-4 max-w-2xl">
-                I run <a href="https://github.com/devops-ia" target="_blank" rel="noopener" class="text-primary hover:text-primary-container transition-colors">devops-ia</a>, Helm charts and Kubernetes tools that teams depend on for real workloads. Same standards I bring to client work.
+            <p class="text-neutral-400 mb-4 max-w-2xl reveal-up">
+                I run <a href="https://github.com/devops-ia" target="_blank" rel="noopener" class="text-[#CDFF50] hover:text-white transition-colors border-b border-[#CDFF50]/30 hover:border-white">devops-ia</a>, Helm charts and Kubernetes tools that teams depend on for real workloads. Same standards I bring to client work.
             </p>
-
-            <h3 class="text-sm font-bold tracking-widest uppercase text-on-surface-variant/60 mb-8 mt-12">Projects</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <a href="https://github.com/devops-ia/helm-opencti" class="p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-primary/50 transition-all group" target="_blank" rel="noopener">
-                    <h4 class="text-xl font-bold text-white font-mono tracking-tighter mb-3">helm-opencti</h4>
-                    <p class="text-on-surface-variant text-sm mb-6">Deploy OpenCTI on Kubernetes, the cyber threat intelligence platform, ready for production</p>
-                    <span class="text-primary text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">View Repository <span class="material-symbols-outlined text-sm">arrow_outward</span></span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-2 border-neutral-800 mt-12">
+                <a href="https://github.com/devops-ia/helm-opencti" class="oss-card p-8 md:p-10 border-b-2 md:border-r-2 border-neutral-800 bg-[#0a0a0a] block" target="_blank" rel="noopener">
+                    <h4 class="text-xl font-mono font-bold text-white tracking-tight mb-3">helm-opencti</h4>
+                    <p class="text-neutral-500 text-sm mb-6">Deploy OpenCTI on Kubernetes, the cyber threat intelligence platform, ready for production</p>
+                    <span class="font-mono text-[11px] font-bold tracking-[0.15em] uppercase text-[#CDFF50]">View repo →</span>
                 </a>
-                <a href="https://github.com/devops-ia/helm-cruise-control" class="p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-primary/50 transition-all group" target="_blank" rel="noopener">
-                    <h4 class="text-xl font-bold text-white font-mono tracking-tighter mb-3">helm-cruise-control</h4>
-                    <p class="text-on-surface-variant text-sm mb-6">Run Cruise Control on K8s to keep your Kafka clusters balanced and healthy</p>
-                    <span class="text-primary text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">View Repository <span class="material-symbols-outlined text-sm">arrow_outward</span></span>
+                <a href="https://github.com/devops-ia/helm-cruise-control" class="oss-card p-8 md:p-10 border-b-2 border-neutral-800 bg-[#0a0a0a] block" target="_blank" rel="noopener">
+                    <h4 class="text-xl font-mono font-bold text-white tracking-tight mb-3">helm-cruise-control</h4>
+                    <p class="text-neutral-500 text-sm mb-6">Run Cruise Control on K8s to keep your Kafka clusters balanced and healthy</p>
+                    <span class="font-mono text-[11px] font-bold tracking-[0.15em] uppercase text-[#CDFF50]">View repo →</span>
                 </a>
-                <a href="https://github.com/devops-ia/helm-simple-krr-dashboard" class="p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-primary/50 transition-all group" target="_blank" rel="noopener">
-                    <h4 class="text-xl font-bold text-white font-mono tracking-tighter mb-3">helm-simple-krr-dashboard</h4>
-                    <p class="text-on-surface-variant text-sm mb-6">See what KRR recommends for your pods, a simple dashboard, no guessing</p>
-                    <span class="text-primary text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">View Repository <span class="material-symbols-outlined text-sm">arrow_outward</span></span>
+                <a href="https://github.com/devops-ia/helm-simple-krr-dashboard" class="oss-card p-8 md:p-10 md:border-r-2 border-b-2 md:border-b-0 border-neutral-800 bg-[#0a0a0a] block" target="_blank" rel="noopener">
+                    <h4 class="text-xl font-mono font-bold text-white tracking-tight mb-3">helm-simple-krr-dashboard</h4>
+                    <p class="text-neutral-500 text-sm mb-6">See what KRR recommends for your pods, a simple dashboard, no guessing</p>
+                    <span class="font-mono text-[11px] font-bold tracking-[0.15em] uppercase text-[#CDFF50]">View repo →</span>
                 </a>
-                <a href="https://github.com/devops-ia/self-learning-platform" class="p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-primary/50 transition-all group" target="_blank" rel="noopener">
-                    <h4 class="text-xl font-bold text-white font-mono tracking-tighter mb-3">self-learning-platform</h4>
-                    <p class="text-on-surface-variant text-sm mb-6">Practice real infra skills through hands-on challenges, no cloud account needed</p>
-                    <span class="text-primary text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">View Repository <span class="material-symbols-outlined text-sm">arrow_outward</span></span>
+                <a href="https://github.com/devops-ia/self-learning-platform" class="oss-card p-8 md:p-10 bg-[#0a0a0a] block" target="_blank" rel="noopener">
+                    <h4 class="text-xl font-mono font-bold text-white tracking-tight mb-3">self-learning-platform</h4>
+                    <p class="text-neutral-500 text-sm mb-6">Practice real infra skills through hands-on challenges, no cloud account needed</p>
+                    <span class="font-mono text-[11px] font-bold tracking-[0.15em] uppercase text-[#CDFF50]">View repo →</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- tech -->
-    <section class="py-24 md:py-32" id="expertise">
-        <div class="max-w-4xl mx-auto px-6 md:px-8">
-            <div class="text-center mb-12">
-                <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Expertise</span>
-                <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight">Tech I use every day</h2>
+    <!-- expertise -->
+    <section class="py-24 md:py-32 border-t-2 border-neutral-800" id="expertise">
+        <div class="max-w-[1000px] mx-auto px-6 md:px-10">
+            <div class="text-center mb-16 reveal-up">
+                <span class="font-mono text-[11px] font-bold tracking-[0.3em] uppercase text-[#CDFF50] mb-4 block">/Expertise</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white tracking-[-0.03em] uppercase">Tech I use every day</h2>
             </div>
-            <div class="grid grid-cols-3 gap-px bg-outline-variant/10 border border-outline-variant/10 rounded-2xl overflow-hidden">
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/aws.svg" alt="AWS" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">AWS</span>
+            <div class="grid grid-cols-3 border-2 border-neutral-800 reveal-scale">
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-r border-neutral-800 bg-[#0a0a0a]">
+                    <img src="assets/logos/aws.svg" alt="AWS" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">AWS</span>
                 </div>
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/terraform.svg" alt="Terraform" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">Terraform</span>
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-r border-neutral-800 bg-[#0a0a0a]">
+                    <img src="assets/logos/terraform.svg" alt="Terraform" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">Terraform</span>
                 </div>
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/kubernetes.svg" alt="Kubernetes" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">Kubernetes</span>
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-neutral-800 bg-[#0a0a0a]">
+                    <img src="assets/logos/kubernetes.svg" alt="Kubernetes" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">Kubernetes</span>
                 </div>
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/helm.png" alt="Helm" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">Helm</span>
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-r border-neutral-800 bg-[#0a0a0a]">
+                    <img src="assets/logos/helm.png" alt="Helm" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">Helm</span>
                 </div>
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/github.svg" alt="GitHub Actions" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">GH Actions</span>
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-r border-neutral-800 bg-[#0a0a0a]">
+                    <img src="assets/logos/github.svg" alt="GitHub Actions" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">GH Actions</span>
                 </div>
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/gitlab.svg" alt="GitLab CI/CD" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">GitLab</span>
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-neutral-800 bg-[#0a0a0a]">
+                    <img src="assets/logos/gitlab.svg" alt="GitLab CI/CD" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">GitLab</span>
                 </div>
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/argocd.svg" alt="ArgoCD" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">ArgoCD</span>
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-r border-neutral-800 bg-[#0a0a0a]">
+                    <img src="assets/logos/argocd.svg" alt="ArgoCD" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">ArgoCD</span>
                 </div>
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/prometheus.svg" alt="Prometheus" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">Prometheus</span>
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-r border-neutral-800 bg-[#0a0a0a]">
+                    <img src="assets/logos/prometheus.svg" alt="Prometheus" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">Prometheus</span>
                 </div>
-                <div class="p-8 md:p-12 bg-surface flex flex-col items-center justify-center gap-4 group hover:bg-surface-container-low transition-colors">
-                    <img src="assets/logos/dynatrace.svg" alt="Dynatrace" class="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-zinc-500">Dynatrace</span>
+                <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 bg-[#0a0a0a]">
+                    <img src="assets/logos/dynatrace.svg" alt="Dynatrace" class="w-10 h-10 opacity-50 transition-all">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-600">Dynatrace</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- contact -->
-    <section class="py-24 md:py-32 bg-surface" id="contact">
-        <div class="max-w-7xl mx-auto px-6 md:px-8">
-            <div class="glass-card p-10 md:p-16 lg:p-20 rounded-3xl border border-outline-variant/10 relative overflow-hidden glow-blue">
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                    <!-- left: form -->
-                    <div>
-                        <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Get in touch</span>
-                        <h2 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tighter">Let's talk about your project</h2>
-                        <p class="text-on-surface-variant mb-8">Tell me what you're working on. I'll get back to you within 24 hours.</p>
+    <section class="py-24 md:py-32 border-t-2 border-neutral-800" id="contact">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+                <!-- left: form -->
+                <div class="reveal-left">
+                    <span class="font-mono text-[11px] font-bold tracking-[0.3em] uppercase text-[#CDFF50] mb-4 block">/Contact</span>
+                    <h2 class="text-4xl md:text-6xl font-display font-bold text-white mb-4 tracking-[-0.03em] uppercase leading-[0.95]">Let's talk about<br>your project</h2>
+                    <p class="text-neutral-400 mb-10">Tell me what you're working on. I'll get back to you within 24 hours.</p>
 
-                        <form id="contactForm" class="space-y-5" onsubmit="submitContactForm(event)">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="contactName" class="text-xs font-bold tracking-widest uppercase text-on-surface-variant/60 mb-2 block">Name</label>
-                                    <input type="text" id="contactName" required placeholder="Your name"
-                                        class="w-full px-4 py-3 rounded-lg bg-surface-container-high border border-outline-variant/15 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
-                                </div>
-                                <div>
-                                    <label for="contactEmail" class="text-xs font-bold tracking-widest uppercase text-on-surface-variant/60 mb-2 block">Email</label>
-                                    <input type="email" id="contactEmail" required placeholder="you@company.com"
-                                        class="w-full px-4 py-3 rounded-lg bg-surface-container-high border border-outline-variant/15 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
-                                </div>
+                    <form id="contactForm" class="space-y-6" onsubmit="submitContactForm(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contactName" class="font-mono text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-600 mb-2 block">Name</label>
+                                <input type="text" id="contactName" required placeholder="Your name"
+                                    class="w-full px-0 py-3 bg-transparent border-0 border-b-2 border-neutral-800 text-white placeholder-neutral-700 text-sm focus:outline-none focus:border-[#CDFF50] transition-colors font-body">
                             </div>
                             <div>
-                                <label for="contactService" class="text-xs font-bold tracking-widest uppercase text-on-surface-variant/60 mb-2 block">What do you need help with?</label>
-                                <select id="contactService"
-                                    class="w-full px-4 py-3 rounded-lg bg-surface-container-high border border-outline-variant/15 text-white text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
-                                    <option value="General inquiry">General inquiry</option>
-                                    <option value="Cloud architecture and migration">Cloud architecture and migration</option>
-                                    <option value="Kubernetes and orchestration">Kubernetes and orchestration</option>
-                                    <option value="Modernization and containers">Modernization and containers</option>
-                                    <option value="DevOps strategy and pipelines">DevOps strategy and pipelines</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="contactMessage" class="text-xs font-bold tracking-widest uppercase text-on-surface-variant/60 mb-2 block">Message</label>
-                                <textarea id="contactMessage" rows="4" required placeholder="Tell me about your project, timeline, and what you're looking for..."
-                                    class="w-full px-4 py-3 rounded-lg bg-surface-container-high border border-outline-variant/15 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"></textarea>
-                            </div>
-                            <button type="submit"
-                                class="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-lg font-bold text-base hover:bg-primary-container transition-all active:scale-95 flex items-center justify-center gap-2">
-                                Send message
-                                <span class="material-symbols-outlined text-base">arrow_forward</span>
-                            </button>
-                        </form>
-                    </div>
-
-                    <!-- right: links + social -->
-                    <div class="flex flex-col justify-between gap-10">
-                        <div>
-                            <span class="text-primary font-bold tracking-widest text-xs uppercase mb-6 block">Or reach me directly</span>
-                            <div class="space-y-5">
-                                <a class="flex items-center gap-4 group" href="mailto:projects@ialejandro.rocks">
-                                    <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary transition-all">
-                                        <span class="material-symbols-outlined text-white">mail</span>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs text-on-surface-variant/60 block">Email me at</span>
-                                        <span class="text-lg font-bold text-white group-hover:text-primary transition-colors">projects@ialejandro.rocks</span>
-                                    </div>
-                                </a>
-                                <a class="flex items-center gap-4 group" href="https://calendly.com/ialejandro-projects/potential-project" target="_blank" rel="noopener">
-                                    <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary transition-all">
-                                        <span class="material-symbols-outlined text-white">calendar_month</span>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs text-on-surface-variant/60 block">Prefer a call?</span>
-                                        <span class="text-lg font-bold text-white group-hover:text-primary transition-colors">Schedule a discovery call</span>
-                                    </div>
-                                </a>
+                                <label for="contactEmail" class="font-mono text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-600 mb-2 block">Email</label>
+                                <input type="email" id="contactEmail" required placeholder="you@company.com"
+                                    class="w-full px-0 py-3 bg-transparent border-0 border-b-2 border-neutral-800 text-white placeholder-neutral-700 text-sm focus:outline-none focus:border-[#CDFF50] transition-colors font-body">
                             </div>
                         </div>
-
                         <div>
-                            <span class="text-xs font-bold tracking-widest uppercase text-on-surface-variant/40 mb-4 block">Find me on</span>
-                            <div class="grid grid-cols-2 gap-3">
-                                <a href="https://linkedin.com/in/ialejandro/" class="p-4 rounded-xl bg-surface-container-highest/50 hover:bg-surface-container-highest hover:scale-105 transition-all flex items-center gap-3 group" target="_blank" rel="noopener">
-                                    <img src="assets/logos/linkedin.svg" alt="LinkedIn" class="w-6 h-6 opacity-60 group-hover:opacity-100 transition-opacity">
-                                    <span class="text-sm font-semibold text-white">LinkedIn</span>
-                                </a>
-                                <a href="https://github.com/ialejandro" class="p-4 rounded-xl bg-surface-container-highest/50 hover:bg-surface-container-highest hover:scale-105 transition-all flex items-center gap-3 group" target="_blank" rel="noopener">
-                                    <img src="assets/logos/github.svg" alt="GitHub" class="w-6 h-6 opacity-60 group-hover:opacity-100 transition-opacity">
-                                    <span class="text-sm font-semibold text-white">GitHub</span>
-                                </a>
-                                <a href="https://www.malt.es/profile/ivanalejandromarugan" class="p-4 rounded-xl bg-surface-container-highest/50 hover:bg-surface-container-highest hover:scale-105 transition-all flex items-center gap-3 group" target="_blank" rel="noopener">
-                                    <img src="assets/logos/malt.svg" alt="Malt" class="w-6 h-6 opacity-60 group-hover:opacity-100 transition-opacity">
-                                    <span class="text-sm font-semibold text-white">Malt</span>
-                                </a>
-                                <a href="https://app.shakersworks.com/share-profile/6939f019799e575028145f15?tab=work-skills" class="p-4 rounded-xl bg-surface-container-highest/50 hover:bg-surface-container-highest hover:scale-105 transition-all flex items-center gap-3 group" target="_blank" rel="noopener">
-                                    <img src="assets/logos/shakers.svg" alt="Shakers" class="w-6 h-6 opacity-60 group-hover:opacity-100 transition-opacity">
-                                    <span class="text-sm font-semibold text-white">Shakers</span>
-                                </a>
-                            </div>
+                            <label for="contactService" class="font-mono text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-600 mb-2 block">What do you need help with?</label>
+                            <select id="contactService"
+                                class="w-full px-0 py-3 bg-transparent border-0 border-b-2 border-neutral-800 text-white text-sm focus:outline-none focus:border-[#CDFF50] transition-colors font-body">
+                                <option value="General inquiry">General inquiry</option>
+                                <option value="Cloud architecture and migration">Cloud architecture and migration</option>
+                                <option value="Kubernetes and orchestration">Kubernetes and orchestration</option>
+                                <option value="Modernization and containers">Modernization and containers</option>
+                                <option value="DevOps strategy and pipelines">DevOps strategy and pipelines</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="contactMessage" class="font-mono text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-600 mb-2 block">Message</label>
+                            <textarea id="contactMessage" rows="4" required placeholder="Tell me about your project, timeline, and what you're looking for..."
+                                class="w-full px-0 py-3 bg-transparent border-0 border-b-2 border-neutral-800 text-white placeholder-neutral-700 text-sm focus:outline-none focus:border-[#CDFF50] transition-colors resize-none font-body"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="inline-flex items-center gap-3 px-8 py-4 bg-[#CDFF50] text-black font-bold text-sm uppercase tracking-wider hover:bg-white transition-colors">
+                            Send message
+                            <span class="text-lg">→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- right: links + social -->
+                <div class="flex flex-col justify-between gap-10 reveal-right">
+                    <div>
+                        <span class="font-mono text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-600 mb-8 block">Or reach me directly</span>
+                        <div class="space-y-6">
+                            <a class="flex items-center gap-5 group" href="mailto:projects@ialejandro.rocks">
+                                <div class="w-14 h-14 border-2 border-neutral-800 flex items-center justify-center group-hover:bg-[#CDFF50] group-hover:border-[#CDFF50] transition-all">
+                                    <span class="text-white group-hover:text-black text-xl transition-colors">✉</span>
+                                </div>
+                                <div>
+                                    <span class="font-mono text-[10px] text-neutral-600 block uppercase tracking-wider">Email me at</span>
+                                    <span class="text-lg font-bold text-white group-hover:text-[#CDFF50] transition-colors">projects@ialejandro.rocks</span>
+                                </div>
+                            </a>
+                            <a class="flex items-center gap-5 group" href="https://calendly.com/ialejandro-projects/potential-project" target="_blank" rel="noopener">
+                                <div class="w-14 h-14 border-2 border-neutral-800 flex items-center justify-center group-hover:bg-[#CDFF50] group-hover:border-[#CDFF50] transition-all">
+                                    <span class="text-white group-hover:text-black text-xl transition-colors">📅</span>
+                                </div>
+                                <div>
+                                    <span class="font-mono text-[10px] text-neutral-600 block uppercase tracking-wider">Prefer a call?</span>
+                                    <span class="text-lg font-bold text-white group-hover:text-[#CDFF50] transition-colors">Schedule a discovery call</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="font-mono text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-600 mb-4 block">Find me on</span>
+                        <div class="grid grid-cols-2 gap-0 border-2 border-neutral-800">
+                            <a href="https://linkedin.com/in/ialejandro/" class="social-card p-5 flex items-center gap-3 border-b border-r border-neutral-800 bg-[#0a0a0a]" target="_blank" rel="noopener">
+                                <img src="assets/logos/linkedin.svg" alt="LinkedIn" class="w-5 h-5 opacity-60 transition-all">
+                                <span class="font-mono text-xs font-bold text-white uppercase tracking-wider">LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/ialejandro" class="social-card p-5 flex items-center gap-3 border-b border-neutral-800 bg-[#0a0a0a]" target="_blank" rel="noopener">
+                                <img src="assets/logos/github.svg" alt="GitHub" class="w-5 h-5 opacity-60 transition-all">
+                                <span class="font-mono text-xs font-bold text-white uppercase tracking-wider">GitHub</span>
+                            </a>
+                            <a href="https://www.malt.es/profile/ivanalejandromarugan" class="social-card p-5 flex items-center gap-3 border-r border-neutral-800 bg-[#0a0a0a]" target="_blank" rel="noopener">
+                                <img src="assets/logos/malt.svg" alt="Malt" class="w-5 h-5 opacity-60 transition-all">
+                                <span class="font-mono text-xs font-bold text-white uppercase tracking-wider">Malt</span>
+                            </a>
+                            <a href="https://app.shakersworks.com/share-profile/6939f019799e575028145f15?tab=work-skills" class="social-card p-5 flex items-center gap-3 bg-[#0a0a0a]" target="_blank" rel="noopener">
+                                <img src="assets/logos/shakers.svg" alt="Shakers" class="w-5 h-5 opacity-60 transition-all">
+                                <span class="font-mono text-xs font-bold text-white uppercase tracking-wider">Shakers</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -384,10 +361,10 @@
     </section>
 
     <!-- footer -->
-    <footer class="border-t border-zinc-800/30 bg-surface">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 py-10 flex justify-center items-center">
-            <p class="text-xs tracking-widest uppercase text-zinc-500 text-center">
-                Ivan Alejandro Marugan | <span id="currentYear"></span>
+    <footer class="border-t-2 border-neutral-800">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-10 flex justify-center items-center">
+            <p class="font-mono text-[10px] tracking-[0.2em] uppercase text-neutral-600 text-center">
+                Ivan Alejandro Marugan · <span id="currentYear"></span>
             </p>
         </div>
     </footer>
@@ -395,15 +372,11 @@
     <!-- email modal -->
     <div id="contactModal" class="modal-overlay">
         <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="modal-title">Contact via email</h3>
-                </div>
+            <div class="modal-header-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span class="modal-title">Contact via email</span>
             </div>
             <div class="modal-body">
                 <div class="modal-service" id="modalServiceName"></div>
@@ -411,7 +384,7 @@
             </div>
             <div class="modal-actions">
                 <button class="modal-btn modal-btn-secondary" onclick="closeModal()">Cancel</button>
-                <button class="modal-btn modal-btn-primary" onclick="confirmContact()">Open email client</button>
+                <button class="modal-btn modal-btn-primary" onclick="confirmContact()">Open email →</button>
             </div>
         </div>
     </div>
