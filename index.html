@@ -9,25 +9,11 @@
 
     <title>Ivan Alejandro Marugan | Platform Engineer | Cloud | DevOps | AWS | Kubernetes | Terraform</title>
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="tailwind.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        display: ['"Space Grotesk"', 'sans-serif'],
-                        body: ['"Space Grotesk"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace'],
-                    }
-                },
-            },
-        }
-    </script>
 </head>
 <body class="bg-[#FAFAFA] text-neutral-900 font-body antialiased">
 
@@ -157,7 +143,10 @@
                 <div class="lg:col-span-5 reveal-left">
                     <div class="relative">
                         <div class="absolute -top-4 -left-4 w-full h-full border-2 border-[#4D7C0F]"></div>
-                        <img alt="Ivan Alejandro Marugan" class="relative z-10 w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700 border-2 border-neutral-900" src="assets/photo-profile.jpg">
+                        <picture>
+                            <source srcset="assets/photo-profile.webp" type="image/webp">
+                            <img alt="Ivan Alejandro Marugan" class="relative z-10 w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700 border-2 border-neutral-900" src="assets/photo-profile.jpg" width="720" height="720" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                 </div>
                 <div class="lg:col-span-7 reveal-right">
@@ -183,7 +172,7 @@
     <section class="py-24 md:py-32 border-t-2 border-neutral-200" id="open-source">
         <div class="max-w-[1400px] mx-auto px-6 md:px-10">
             <div class="flex items-center gap-6 mb-6 reveal-up">
-                <img src="https://avatars.githubusercontent.com/u/102672086?s=200&v=4" alt="devops-ia" class="w-14 h-14 border-2 border-neutral-900">
+                <img src="https://avatars.githubusercontent.com/u/102672086?s=200&v=4" alt="devops-ia" class="w-14 h-14 border-2 border-neutral-900" width="56" height="56" loading="lazy" decoding="async">
                 <div>
                     <span class="font-mono text-[11px] font-bold tracking-[0.3em] uppercase text-[#4D7C0F] block">/Open Source</span>
                     <h2 class="text-3xl md:text-4xl font-display font-bold text-neutral-900 tracking-[-0.03em] uppercase mt-1">devops-ia</h2>
@@ -226,39 +215,39 @@
             </div>
             <div class="grid grid-cols-3 border-2 border-neutral-200 reveal-scale">
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-r border-neutral-200 bg-[#FAFAFA]">
-                    <img src="assets/logos/aws.svg" alt="AWS" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/aws.svg" alt="AWS" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">AWS</span>
                 </div>
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-r border-neutral-200 bg-[#FAFAFA]">
-                    <img src="assets/logos/terraform.svg" alt="Terraform" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/terraform.svg" alt="Terraform" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">Terraform</span>
                 </div>
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-neutral-200 bg-[#FAFAFA]">
-                    <img src="assets/logos/kubernetes.svg" alt="Kubernetes" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/kubernetes.svg" alt="Kubernetes" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">Kubernetes</span>
                 </div>
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-r border-neutral-200 bg-[#FAFAFA]">
-                    <img src="assets/logos/helm.png" alt="Helm" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/helm.png" alt="Helm" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">Helm</span>
                 </div>
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-r border-neutral-200 bg-[#FAFAFA]">
-                    <img src="assets/logos/github.svg" alt="GitHub Actions" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/github.svg" alt="GitHub Actions" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">GH Actions</span>
                 </div>
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-b border-neutral-200 bg-[#FAFAFA]">
-                    <img src="assets/logos/gitlab.svg" alt="GitLab CI/CD" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/gitlab.svg" alt="GitLab CI/CD" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">GitLab</span>
                 </div>
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-r border-neutral-200 bg-[#FAFAFA]">
-                    <img src="assets/logos/argocd.svg" alt="ArgoCD" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/argocd.svg" alt="ArgoCD" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">ArgoCD</span>
                 </div>
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 border-r border-neutral-200 bg-[#FAFAFA]">
-                    <img src="assets/logos/prometheus.svg" alt="Prometheus" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/prometheus.svg" alt="Prometheus" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">Prometheus</span>
                 </div>
                 <div class="tech-cell p-8 md:p-12 flex flex-col items-center justify-center gap-4 bg-[#FAFAFA]">
-                    <img src="assets/logos/dynatrace.svg" alt="Dynatrace" class="w-10 h-10 opacity-70 transition-all">
+                    <img src="assets/logos/dynatrace.svg" alt="Dynatrace" class="w-10 h-10 opacity-70 transition-all" width="40" height="40" loading="lazy" decoding="async">
                     <span class="font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">Dynatrace</span>
                 </div>
             </div>
@@ -342,19 +331,19 @@
                         <span class="font-mono text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-500 mb-4 block">Find me on</span>
                         <div class="grid grid-cols-2 gap-0 border-2 border-neutral-200">
                             <a href="https://linkedin.com/in/ialejandro/" class="social-card p-5 flex items-center gap-3 border-b border-r border-neutral-200 bg-[#FAFAFA]" target="_blank" rel="noopener">
-                                <img src="assets/logos/linkedin.svg" alt="LinkedIn" class="w-5 h-5 opacity-60 transition-all">
+                                <img src="assets/logos/linkedin.svg" alt="LinkedIn" class="w-5 h-5 opacity-60 transition-all" width="20" height="20" loading="lazy" decoding="async">
                                 <span class="font-mono text-xs font-bold text-neutral-900 uppercase tracking-wider">LinkedIn</span>
                             </a>
                             <a href="https://github.com/ialejandro" class="social-card p-5 flex items-center gap-3 border-b border-neutral-200 bg-[#FAFAFA]" target="_blank" rel="noopener">
-                                <img src="assets/logos/github.svg" alt="GitHub" class="w-5 h-5 opacity-60 transition-all">
+                                <img src="assets/logos/github.svg" alt="GitHub" class="w-5 h-5 opacity-60 transition-all" width="20" height="20" loading="lazy" decoding="async">
                                 <span class="font-mono text-xs font-bold text-neutral-900 uppercase tracking-wider">GitHub</span>
                             </a>
                             <a href="https://www.malt.es/profile/ivanalejandromarugan" class="social-card p-5 flex items-center gap-3 border-r border-neutral-200 bg-[#FAFAFA]" target="_blank" rel="noopener">
-                                <img src="assets/logos/malt.svg" alt="Malt" class="w-5 h-5 opacity-60 transition-all">
+                                <img src="assets/logos/malt.svg" alt="Malt" class="w-5 h-5 opacity-60 transition-all" width="20" height="20" loading="lazy" decoding="async">
                                 <span class="font-mono text-xs font-bold text-neutral-900 uppercase tracking-wider">Malt</span>
                             </a>
                             <a href="https://app.shakersworks.com/share-profile/6939f019799e575028145f15?tab=work-skills" class="social-card p-5 flex items-center gap-3 bg-[#FAFAFA]" target="_blank" rel="noopener">
-                                <img src="assets/logos/shakers.svg" alt="Shakers" class="w-5 h-5 opacity-60 transition-all">
+                                <img src="assets/logos/shakers.svg" alt="Shakers" class="w-5 h-5 opacity-60 transition-all" width="20" height="20" loading="lazy" decoding="async">
                                 <span class="font-mono text-xs font-bold text-neutral-900 uppercase tracking-wider">Shakers</span>
                             </a>
                         </div>
